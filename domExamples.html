@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS Document.body Demo</title>
+    <script>
+    alert("From HEAD: " + document.body); // Outputs: null (since <body> is not parsed yet)
+    </script>
+</head>
+<body>
+    <button id="btnsave" class="btn" style="color:aqua">save</button>
+        <script>
+        console.log("From BODY: " + document.body); // Outputs: HTMLBodyElement
+        console.log(document.button)
+        </script>
+    <div id="main">
+        <h1 id="title">My Heading</h1>
+        <p id="hint"><span>This is some text.</span></p>
+    </div>
+
+    <script>
+    var hint = document.getElementById("hint");
+    alert(hint.parentElement.nodeName); // Outputs: DIV
+    hint.parentElement.style.backgroundColor = "yellow";
+    </script>
+</body>
+</html>
